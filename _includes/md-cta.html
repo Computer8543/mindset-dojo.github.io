@@ -1,0 +1,25 @@
+{%- comment -%}
+Usage examples:
+  {% include md-cta.html href=site.repo_url text="GitHub Project" %}
+  {% include md-cta.html href=site.repo_url text="GitHub Project" target="_blank" rel="noopener noreferrer" aria="Open Mindset Dojo on GitHub" %}
+  If you must pass an expression or combine variables, see the "capture" example below.
+{%- endcomment -%}
+
+{%- assign wrapper = include.wrapper | default: "md-cta-group" -%}
+{%- assign anchor_class = include.anchor_class | default: "" -%}
+{%- assign href = include.href | default: "#" -%}
+{%- assign text = include.text | default: "Click" -%}
+{%- assign target = include.target | default: "" -%}
+{%- assign rel = include.rel | default: "" -%}
+{%- assign aria = include.aria | default: "" -%}
+{%- assign extra = include.extra | default: "" -%}
+
+<div class="{{ wrapper }}">
+  <a href="{{ href }}"
+     {%- if anchor_class != "" -%} class="{{ anchor_class }}" {%- endif -%}
+     {%- if target != "" -%} target="{{ target }}" {%- endif -%}
+     {%- if rel != "" -%} rel="{{ rel }}" {%- endif -%}
+     {%- if aria != "" -%} aria-label="{{ aria }}" {%- endif -%}
+     {{ extra | strip }}
+  >{{ text }}</a>
+</div>
