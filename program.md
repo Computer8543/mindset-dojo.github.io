@@ -60,4 +60,4 @@ css_id: program
   {% endfor %}
 </section>
 
-{% include md-cta.html href="/" text="Engage Community" %}
+{% include md-cta.html href="{{ '/' | relative_url }}" text="Engage Community" %}

@@ -72,5 +72,5 @@ It’s not just coaching.</p>
   {% endfor %}
 </div>
 
-{% include md-cta.html href="/program" text="Explore Program" %}
+{% include md-cta.html href="{{ '/program' | relative_url }}" text="Explore Program" %}
 
