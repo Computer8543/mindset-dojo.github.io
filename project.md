@@ -93,6 +93,5 @@ Project leadership designations are *voluntary* and reviewed periodically to ens
 * **Demonstrates and enrolls** through various social, personal, and professional circles
 * **Attunes** to the identity, integrity, and resonance of the project
 
-<div class="md-cta-group">
-    <a href="{{site.repo_url}}">GitHub Project</a>
-</div>
+{% include md-cta.html href=site.repo_url text="GitHub Project" %}
+
